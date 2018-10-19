@@ -158,9 +158,9 @@ open class AvatarView: UIImageView {
         return CGRect(startX+2, startY, w-4, h)
     }
 
-    // MARK: - Internal methods
+    // MARK: - methods
 
-    internal func prepareView() {
+    func prepareView() {
         backgroundColor = .gray
         contentMode = .scaleAspectFill
         layer.masksToBounds = true

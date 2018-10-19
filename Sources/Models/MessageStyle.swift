@@ -35,7 +35,7 @@ public enum MessageStyle {
         case topRight
         case bottomRight
 
-        internal var imageOrientation: UIImage.Orientation {
+        var imageOrientation: UIImage.Orientation {
             switch self {
             case .bottomRight: return .up
             case .bottomLeft: return .upMirrored
@@ -52,7 +52,7 @@ public enum MessageStyle {
         case curved
         case pointedEdge
 
-        internal var imageNameSuffix: String {
+        var imageNameSuffix: String {
             switch self {
             case .curved:
                 return "_tail_v2"
@@ -101,7 +101,7 @@ public enum MessageStyle {
 
     // MARK: - Internal
     
-    internal static let bubbleImageCache: NSCache<NSString, UIImage> = {
+    static let bubbleImageCache: NSCache<NSString, UIImage> = {
         let cache = NSCache<NSString, UIImage>()
         cache.name = "com.messagekit.MessageKit.bubbleImageCache"
         return cache
